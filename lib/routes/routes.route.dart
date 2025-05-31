@@ -15,6 +15,6 @@ class Routes {
 // ];
 
   final routes=[
-    GetPage(name: "/home", page: ()=>const HomeScreen(name:"Home Screen"))
+    GetPage(name: "/home", page: ()=> HomeScreen())
   ];
 }
