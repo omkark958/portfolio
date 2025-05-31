@@ -15,7 +15,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Text("Welcome to hood")
+      home: Text("Welcome omkar")
       );
     
   }
