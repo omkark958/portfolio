@@ -3,7 +3,7 @@ name: Flutter Web Deploy to Netlify
 on:
   push:
     branches:
-      - master  # change to 'master' if that's your default branch
+      - master  # or 'main' if that's your default
 
 jobs:
   build-and-deploy:
@@ -24,6 +24,9 @@ jobs:
 
       - name: Build Flutter Web
         run: flutter build web
+
+      - name: Remove service worker to avoid caching issues
+        run: rm build/web/flutter_service_worker.js
 
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
