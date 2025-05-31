@@ -42,7 +42,7 @@ void openBase64PdfInNewTab(
   Widget build(BuildContext context){
     return Scaffold(body:Center(
       child:  Column(children: [Text("Working on it 🙌"),SizedBox(height: 25,),
-      ElevatedButton(onPressed: openBase64PdfInNewTab, child: Text("Download Resume"))],),
+      ElevatedButton(onPressed: openBase64PdfInNewTab, child: Text("Resume"))],),
     ));
   }
 }
