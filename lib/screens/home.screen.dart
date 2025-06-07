@@ -11,7 +11,10 @@ class HomeScreen extends StatelessWidget{
   HomeScreen({super.key});
   testApi()async{
     dynamic res=await api.test();
-    print(res);
+    if(res.body!=null){
+      print(res.body);
+      AlertDialog(content: Text("Connection is successfull"),);
+    }
   }
 
 
@@ -42,7 +45,8 @@ void openBase64PdfInNewTab(
   Widget build(BuildContext context){
     return Scaffold(body:Center(
       child:  Column(children: [Text("Working on it 🙌"),SizedBox(height: 25,),
-      ElevatedButton(onPressed: openBase64PdfInNewTab, child: Text("Download Resume"))],),
+      ElevatedButton(onPressed: openBase64PdfInNewTab, child: Text("Download Resume")),
+      ElevatedButton(onPressed: testApi, child: Text("test"))],),
     ));
   }
 }
